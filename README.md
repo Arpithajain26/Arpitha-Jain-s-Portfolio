@@ -39,3 +39,39 @@ git clone <your-repository-url>
 cd portfolio
 npm install
 npm run dev
+
+
+Then open the Vite URL shown in your terminal — usually:
+http://localhost:5173
+📜 Available Scripts
+Command	Description
+npm run dev	🟢 Starts the development server
+npm run build	📦 Creates an optimized production build
+npm run preview	👀 Previews the production build locally
+
+📁 Project Structure
+src/
+  components/       # 🧩 Portfolio sections
+  App.jsx           # 🏠 Main application layout
+  index.css         # 🎨 Global styles and animations
+  main.jsx          # ⚛️ Application entry point
+
+public/
+  profile.jpg       # 👤 Profile image
+  ArpithaJain_Resume.pdf # 📄 Resume
+  events/           # 📸 Gallery images
+  results/          # 🎓 Academic documents
+🎨 Customization
+✏️ Update personal information in src/components/
+🖼️ Replace public/profile.jpg to update the profile picture
+📄 Replace public/ArpithaJain_Resume.pdf to update the resume
+📷 Add gallery images inside public/events/
+🎭 Customize colors, animations, and fonts in src/index.css
+📬 Connect With Me
+💼 LinkedIn
+🐙 GitHub
+🧠 LeetCode
+📺 YouTube
+📄 License
+This project is created for personal portfolio use.
+Made with 💜 by Arpitha Jain C B.
