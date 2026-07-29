@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
-import './Navbar.css'
 
 const navLinks = [
   { name: 'Home', href: '#hero' },
@@ -43,43 +41,66 @@ const Navbar = () => {
   }
 
   return (
-    <motion.nav
-      className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10 py-3 shadow-lg' : 'bg-transparent py-5'
+      }`}
     >
-      <div className="navbar-container">
-        <a href="#hero" className="navbar-logo" onClick={(e) => handleClick(e, '#hero')}>
-          Arpitha<span>.</span>
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <a href="#hero" className="text-2xl font-bold text-white tracking-wide" onClick={(e) => handleClick(e, '#hero')}>
+          Arpitha<span className="text-gray-400">.</span>
         </a>
 
-        <ul className={`navbar-links ${mobileOpen ? 'navbar-links--open' : ''}`}>
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className={`navbar-link ${activeSection === link.href.replace('#', '') ? 'navbar-link--active' : ''}`}
+                className={`text-sm font-medium transition-colors relative ${
+                  activeSection === link.href.replace('#', '') ? 'text-white' : 'text-gray-400 hover:text-white'
+                }`}
                 onClick={(e) => handleClick(e, link.href)}
               >
                 {link.name}
+                {activeSection === link.href.replace('#', '') && (
+                  <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-white rounded-full"></span>
+                )}
               </a>
             </li>
           ))}
         </ul>
 
+        {/* Mobile Toggle */}
         <button
-          className="navbar-toggle"
+          className="md:hidden text-2xl text-white z-50 relative"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
-          id="navbar-toggle-btn"
         >
           {mobileOpen ? <HiX /> : <HiMenuAlt3 />}
         </button>
       </div>
 
-      {mobileOpen && <div className="navbar-overlay" onClick={() => setMobileOpen(false)} />}
-    </motion.nav>
+      {/* Mobile Nav */}
+      <div
+        className={`fixed inset-0 bg-black/95 backdrop-blur-lg flex flex-col justify-center items-center gap-6 transition-transform duration-300 md:hidden z-40 ${
+          mobileOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        {navLinks.map((link) => (
+          <a
+            key={link.name}
+            href={link.href}
+            className={`text-2xl font-semibold transition-colors ${
+              activeSection === link.href.replace('#', '') ? 'text-white' : 'text-gray-400 hover:text-white'
+            }`}
+            onClick={(e) => handleClick(e, link.href)}
+          >
+            {link.name}
+          </a>
+        ))}
+      </div>
+    </nav>
   )
 }
 

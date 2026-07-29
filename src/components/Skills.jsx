@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { 
   SiPython, SiJavascript, SiHtml5, SiCss, SiStreamlit, SiFlask, SiGit, SiGithub, SiSqlite, SiC
 } from 'react-icons/si';
 import { FaJava, FaDatabase } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
 import { BsRobot, BsGraphUp } from 'react-icons/bs';
-import './Skills.css';
 
 const skillCategories = [
   {
@@ -47,81 +47,51 @@ const skillCategories = [
   }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { type: 'spring', stiffness: 100 }
-  }
-};
-
 const Skills = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <section id="skills" className="section dark-section">
-      <div className="container">
-        <div className="section-header">
-          <motion.span 
-            className="section-subtitle"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+    <section id="skills" className="py-20 bg-black text-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <span 
+            className="text-gray-400 uppercase tracking-widest text-sm mb-2 block font-semibold"
+            data-aos="fade-up"
           >
             My Skills
-          </motion.span>
-          <motion.h2 
-            className="section-title"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          </span>
+          <h2 
+            className="text-4xl md:text-5xl font-bold mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
-            Technologies & <span>Tools</span>
-          </motion.h2>
+            Technologies & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-600">Tools</span>
+          </h2>
         </div>
 
-        <div className="skills-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, idx) => (
-            <motion.div 
+            <div 
               key={idx}
-              className="skill-category glass-card"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay={idx * 100}
             >
-              <h3 className="category-title">{category.title}</h3>
-              <motion.div 
-                className="category-skills"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
+              <h3 className="text-2xl font-bold mb-6 text-white text-center">{category.title}</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {category.skills.map((skill, sIdx) => (
-                  <motion.div 
+                  <div 
                     key={sIdx} 
-                    className="skill-item"
-                    variants={itemVariants}
-                    whileHover={{ scale: 1.05, y: -5 }}
+                    className="flex flex-col items-center justify-center p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                   >
-                    <div className="skill-icon">{skill.icon}</div>
-                    <span className="skill-name">{skill.name}</span>
-                  </motion.div>
+                    <div className="text-3xl mb-3">{skill.icon}</div>
+                    <span className="text-xs font-medium text-gray-300 text-center">{skill.name}</span>
+                  </div>
                 ))}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
