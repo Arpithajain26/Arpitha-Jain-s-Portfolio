@@ -24,3 +24,18 @@ A modern, responsive space to showcase my skills, projects, internship experienc
 - 🎭 Framer Motion
 - 🌊 AOS — Animate On Scroll
 - 🧩 React Icons
+
+## 🚀 Getting Started
+
+### 📌 Prerequisites
+
+- Node.js 20 or later
+- npm
+
+### 💻 Installation
+
+```bash
+git clone <your-repository-url>
+cd portfolio
+npm install
+npm run dev
