@@ -1,7 +1,11 @@
-# ✨ Arpitha Jain C B — Portfolio
+# ✨ Arpitha Jain — Portfolio
 
 Welcome to my personal portfolio website!  
 A modern, responsive space to showcase my skills, projects, internship experience, achievements, hackathons, and academic journey. 🚀
+
+## 🌐 Live Demo
+
+🔗 [Visit My Portfolio]https://arpitha-jain-s-portfolio-42ez.vercel.app/
 
 ## 🌟 Highlights
 
