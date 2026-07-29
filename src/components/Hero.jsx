@@ -76,9 +76,9 @@ const Hero = () => {
             data-aos-delay="600"
           >
             <a
-              href="#contact"
+              href="/ArpithaJain_Resume.pdf"
+              download="ArpithaJain_Resume.pdf"
               className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors shadow-lg shadow-white/10"
-              onClick={(e) => { e.preventDefault(); scrollToContact() }}
             >
               <FaDownload /> Download Resume
             </a>

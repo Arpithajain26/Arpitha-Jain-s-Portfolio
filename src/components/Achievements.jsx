@@ -5,6 +5,12 @@ import { FaTrophy, FaCertificate, FaMedal, FaStar, FaAward } from 'react-icons/f
 
 const achievements = [
   {
+    id: 0,
+    icon: <FaTrophy className="text-3xl text-yellow-400" />,
+    title: 'Finalist of Mini Anveshana Hackathon',
+    description: 'Recognized as a finalist in the Mini Anveshana Hackathon for developing innovative engineering solutions.'
+  },
+  {
     id: 1,
     icon: <FaMedal className="text-3xl text-yellow-400" />,
     title: '9.6 CGPA in B.E. (CSE)',

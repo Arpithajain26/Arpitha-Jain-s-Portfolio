@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { 
-  SiPython, SiJavascript, SiHtml5, SiCss, SiStreamlit, SiFlask, SiGit, SiGithub, SiSqlite, SiC
+  SiPython, SiJavascript, SiHtml5, SiCss, SiStreamlit, SiFlask, SiGit, SiGithub, SiSqlite, SiC, SiMongodb
 } from 'react-icons/si';
 import { FaJava, FaDatabase } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
@@ -34,7 +34,8 @@ const skillCategories = [
       { name: 'Git', icon: <SiGit style={{ color: '#F05032' }} /> },
       { name: 'GitHub', icon: <SiGithub style={{ color: '#FFFFFF' }} /> },
       { name: 'VS Code', icon: <VscVscode style={{ color: '#007ACC' }} /> },
-      { name: 'SQLite', icon: <SiSqlite style={{ color: '#003B57' }} /> }
+      { name: 'SQLite', icon: <SiSqlite style={{ color: '#003B57' }} /> },
+      { name: 'MongoDB', icon: <SiMongodb style={{ color: '#47A248' }} /> }
     ]
   },
   {

@@ -40,6 +40,7 @@ function App() {
             <Experience />
             <Achievements />
             <Hackathons />
+            <Gallery />
             <Education />
             <Contact />
           </main>
