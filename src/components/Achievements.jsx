@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaTrophy, FaCertificate, FaMedal, FaStar, FaAward } from 'react-icons/fa';
+import { FaTrophy, FaCertificate, FaMedal, FaStar, FaBriefcase } from 'react-icons/fa';
 
 const achievements = [
   {
@@ -22,24 +22,6 @@ const achievements = [
     title: '100-day LeetCode Streak',
     description: 'Consistent problem solver with a strong focus on algorithms and data structures.'
   },
-  {
-    id: 3,
-    icon: <FaTrophy className="text-3xl text-yellow-400" />,
-    title: 'AWS Student Builder Group Leader',
-    description: 'Leading the local AWS community, organizing events, and guiding peers in cloud technologies.'
-  },
-  {
-    id: 4,
-    icon: <FaCertificate className="text-3xl text-blue-400" />,
-    title: 'Google Cloud Gen AI Academy',
-    description: 'Selected as a participant to explore and build with advanced Generative AI tools.'
-  },
-  {
-    id: 5,
-    icon: <FaAward className="text-3xl text-purple-400" />,
-    title: 'Gemini Student Ambassador (Applied)',
-    description: 'Applied for the prestigious ambassador program to advocate for Google AI technologies.'
-  }
 ];
 
 const certifications = [
@@ -54,6 +36,12 @@ const certifications = [
     title: 'Google Cloud Gen AI Academy',
     issuer: 'Google Cloud',
     icon: <FaCertificate className="text-2xl text-blue-400" />
+  },
+  {
+    id: 3,
+    title: 'Virtual Internship 6.0',
+    issuer: 'Infosys Springboard',
+    icon: <FaBriefcase className="text-2xl text-emerald-400" />
   }
 ];
 
@@ -75,50 +63,66 @@ const Achievements = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold mb-6 border-b border-white/10 pb-2" data-aos="fade-right">Key Milestones</h3>
-            <div className="space-y-6">
-              {achievements.map((item, index) => (
-                <div 
-                  key={item.id} 
-                  className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 flex items-start gap-4 hover:bg-white/10 transition-colors duration-300"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_8rem_minmax(0,1fr)] gap-x-3 gap-y-6">
+          <h3 className="text-2xl font-semibold border-b border-white/10 pb-2" data-aos="fade-right">Key Milestones</h3>
+          <div className="hidden lg:block" />
+          <h3 className="text-2xl font-semibold border-b border-white/10 pb-2" data-aos="fade-left">Certifications</h3>
+
+          {achievements.map((item, index) => {
+            const cert = certifications[index];
+            return (
+              <React.Fragment key={item.id}>
+                <div
+                  className="min-h-36 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 flex items-start gap-4 hover:bg-white/10 transition-colors duration-300"
+                  data-aos="fade-right"
+                  data-aos-delay={index * 120}
                 >
-                  <div className="p-3 bg-white/5 rounded-xl border border-white/10">
-                    {item.icon}
-                  </div>
+                  <div className="p-3 bg-white/5 rounded-xl border border-white/10">{item.icon}</div>
                   <div>
                     <h4 className="text-xl font-bold mb-2 text-white">{item.title}</h4>
                     <p className="text-gray-400 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
 
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold mb-6 border-b border-white/10 pb-2" data-aos="fade-left">Certifications</h3>
-            <div className="space-y-6">
-              {certifications.map((cert, index) => (
-                <div 
-                  key={cert.id} 
-                  className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 flex items-center gap-4 hover:bg-white/10 transition-colors duration-300"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 150}
+                <div className="hidden lg:flex items-center justify-center" aria-hidden="true">
+                  <svg viewBox="0 0 160 100" className={`w-full overflow-visible ${index % 2 ? 'rotate-180' : ''}`} fill="none">
+                    <defs>
+                      <marker id={`arrow-${item.id}`} markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L6,3 z" fill="#e879f9" />
+                      </marker>
+                    </defs>
+                    <path
+                      d="M4 50 C42 4, 104 96, 154 50"
+                      stroke={`url(#connector-gradient-${item.id})`}
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeDasharray="5 7"
+                      markerEnd={`url(#arrow-${item.id})`}
+                      className="animate-pulse"
+                    />
+                    <defs>
+                      <linearGradient id={`connector-gradient-${item.id}`} x1="0" x2="1">
+                        <stop stopColor="#a78bfa" />
+                        <stop offset="1" stopColor="#f9a8d4" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+
+                <div
+                  className="min-h-36 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 flex items-center gap-4 hover:bg-white/10 transition-colors duration-300"
+                  data-aos="fade-left"
+                  data-aos-delay={index * 120}
                 >
-                  <div className="p-3 bg-white/5 rounded-xl border border-white/10">
-                    {cert.icon}
-                  </div>
+                  <div className="p-3 bg-white/5 rounded-xl border border-white/10">{cert.icon}</div>
                   <div>
                     <h4 className="text-lg font-bold text-white">{cert.title}</h4>
                     <p className="text-purple-400 text-sm mt-1">{cert.issuer}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </React.Fragment>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { FaGithub, FaLinkedinIn, FaYoutube, FaInstagram, FaDownload } from 'react-icons/fa'
@@ -14,8 +14,26 @@ const socials = [
 ]
 
 const Hero = () => {
+  const [typedName, setTypedName] = useState('')
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true })
+  }, [])
+
+  useEffect(() => {
+    const fullName = 'Arpitha Jain\nC B'
+    let characterIndex = 0
+
+    const typeName = () => {
+      setTypedName(fullName.slice(0, characterIndex + 1))
+      characterIndex += 1
+      if (characterIndex < fullName.length) {
+        window.setTimeout(typeName, 115)
+      }
+    }
+
+    const timer = window.setTimeout(typeName, 300)
+    return () => window.clearTimeout(timer)
   }, [])
 
   const scrollToContact = () => {
@@ -49,14 +67,19 @@ const Hero = () => {
           </p>
 
           <h1
-            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 leading-tight text-white"
+            className="min-h-32 md:min-h-44 text-5xl md:text-7xl font-extrabold tracking-tight mb-4 leading-tight text-white"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Arpitha Jain<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">
-              C B
-            </span>
+            {typedName.split('\n').map((line, index) => (
+              <span key={index}>
+                {index === 1 ? (
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">{line}</span>
+                ) : line}
+                {index === 0 && typedName.includes('\n') && <br />}
+              </span>
+            ))}
+            <span className="inline-block w-1 h-[0.85em] ml-2 align-[-0.08em] bg-pink-300 animate-pulse" aria-hidden="true" />
           </h1>
 
           <p
@@ -111,16 +134,26 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Visual Element (Glassmorphism / Abstract) */}
         <div
-          className="flex-1 hidden lg:flex justify-center items-center relative"
+          className="flex-1 flex justify-center items-center pb-12 md:pb-0"
           data-aos="zoom-in"
           data-aos-delay="400"
         >
-          <div className="w-72 h-72 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex justify-center items-center relative shadow-[0_0_50px_rgba(255,255,255,0.05)]">
-            <div className="text-4xl font-mono text-white/80 font-bold">&lt;/&gt;</div>
-            <div className="absolute inset-0 rounded-full border border-white/10 animate-[spin_10s_linear_infinite]" style={{ borderTopColor: 'transparent', borderBottomColor: 'transparent', width: '110%', height: '110%', left: '-5%', top: '-5%' }}></div>
-            <div className="absolute inset-0 rounded-full border border-white/5 animate-[spin_15s_linear_infinite_reverse]" style={{ borderLeftColor: 'transparent', borderRightColor: 'transparent', width: '120%', height: '120%', left: '-10%', top: '-10%' }}></div>
+          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 animate-float">
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-purple-500/50 via-pink-400/30 to-cyan-400/50 blur-2xl animate-pulse" />
+            <div className="absolute inset-0 rounded-full border border-white/25 bg-black/20 p-2 shadow-[0_0_45px_rgba(216,180,254,0.3)]">
+              <div className="w-full h-full overflow-hidden rounded-full border-2 border-white/20">
+                <img
+                  src="/profile.jpg"
+                  alt="Arpitha Jain"
+                  className="w-full h-full object-cover object-[50%_32%] transition-transform duration-700 hover:scale-110"
+                />
+              </div>
+            </div>
+            <div className="absolute -inset-5 rounded-full border border-purple-300/40 border-t-transparent border-b-transparent animate-[spin_14s_linear_infinite]" />
+            <div className="absolute -inset-10 rounded-full border border-pink-300/20 border-l-transparent border-r-transparent animate-[spin_20s_linear_infinite_reverse]" />
+            <span className="absolute top-1/2 -left-7 w-3 h-3 rounded-full bg-pink-300 shadow-[0_0_16px_rgba(249,168,212,1)]" />
+            <span className="absolute top-6 -right-6 w-2.5 h-2.5 rounded-full bg-cyan-200 shadow-[0_0_16px_rgba(165,243,252,1)] animate-pulse" />
           </div>
         </div>
       </div>

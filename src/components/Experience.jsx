@@ -10,28 +10,7 @@ const experiences = [
     period: 'Jun 2026 - Aug 2026',
     description: 'Handled data engineering workflows, data prep pipelines, and built a Fake News Detection Web Application using NLP models to classify and flag misleading articles.',
     projectLink: 'https://github.com/Arpithajain26/fake_news_detection-webapp',
-    image: '/infosys_internship.png'
-  },
-  {
-    id: 2,
-    role: 'Full Stack Developer Intern',
-    company: 'XYZ Tech Solutions',
-    period: 'Jun 2025 - Aug 2025',
-    description: 'Built RESTful APIs and responsive web interfaces. Improved application performance by 40%.',
-  },
-  {
-    id: 3,
-    role: 'AI/ML Research Intern',
-    company: 'ABC Research Labs',
-    period: 'Jan 2025 - Apr 2025',
-    description: 'Developed deep learning models for image classification. Achieved 95% accuracy on benchmark datasets.',
-  },
-  {
-    id: 4,
-    role: 'Cloud Computing Intern',
-    company: 'CloudFirst Technologies',
-    period: 'Jun 2024 - Aug 2024',
-    description: 'Designed and deployed serverless architectures on AWS. Reduced infrastructure costs by 30%.',
+    image: '/infosys_internship.jpg'
   }
 ];
 
