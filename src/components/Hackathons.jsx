@@ -6,45 +6,31 @@ import './Hackathons.css';
 const hackathons = [
   {
     id: 1,
-    name: "Smart India Hackathon 2024",
-    result: "Top 10 Finish",
-    description: "Built an AI-powered crop disease detection system to help farmers identify issues early.",
+    name: "Google Cloud Gen AI Academy",
+    result: "Prototype Phase",
+    description: "Participated and built innovative prototypes using advanced Google Gen AI tools.",
     icon: <FaTrophy className="rank-icon rank-top" />
   },
   {
     id: 2,
-    name: "HackBangalore 2025",
-    result: "Winner",
-    description: "Developed a smart city traffic management solution using computer vision and edge computing.",
+    name: "Webcmd Hackathon",
+    result: "Agentic Payments Edition",
+    description: "Developed an AI agentic payment solution for seamless and intelligent transactions.",
     icon: <FaTrophy className="rank-icon rank-winner" />
   },
   {
     id: 3,
-    name: "CodeFest 2024",
-    result: "Runner-up",
-    description: "Created an NLP-based legal document analyzer to simplify complex legal texts for common people.",
+    name: "Eureka Project Idea Pitching",
+    result: "Participant",
+    description: "Pitched a novel AI-based project idea focusing on real-world problem solving.",
     icon: <FaMedal className="rank-icon rank-runner" />
   },
   {
     id: 4,
-    name: "Google Developer Student Club Hackathon",
-    result: "Finalist",
-    description: "Built an accessible education platform tailored for visually impaired students.",
+    name: "AI-related Hackathons",
+    result: "Multiple Appearances",
+    description: "Active participant in various AI hackathons building impactful tech applications.",
     icon: <FaAward className="rank-icon rank-finalist" />
-  },
-  {
-    id: 5,
-    name: "MLH Local Hack Day",
-    result: "Participant",
-    description: "Developed a mental health chatbot leveraging OpenAI APIs for empathetic conversations.",
-    icon: <FaCertificate className="rank-icon rank-participant" />
-  },
-  {
-    id: 6,
-    name: "IEEE Hackathon 2024",
-    result: "2nd Place",
-    description: "Designed an IoT-based energy monitoring system for smart homes to optimize power consumption.",
-    icon: <FaMedal className="rank-icon rank-runner" />
   }
 ];
 

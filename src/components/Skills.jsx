@@ -1,14 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  SiPython, SiCplusplus, SiJavascript, SiTypescript, SiMysql,
-  SiReact, SiHtml5, SiCss3, SiBootstrap, SiTailwindcss,
-  SiNodedotjs, SiExpress, SiFlask, SiDjango, SiFastapi,
-  SiTensorflow, SiPytorch, SiScikitlearn, SiOpencv,
-  SiAmazonwebservices, SiGooglecloud, SiDocker, SiKubernetes, SiGit,
-  SiVisualstudiocode, SiFigma, SiPostman, SiMongodb, SiPostgresql
+  SiPython, SiJavascript, SiHtml5, SiCss3, SiStreamlit, SiFlask, SiGit, SiGithub, SiSqlite, SiC
 } from 'react-icons/si';
-import { FaJava, FaRobot } from 'react-icons/fa';
+import { FaJava, FaDatabase } from 'react-icons/fa';
+import { VscVscode } from 'react-icons/vsc';
+import { BsRobot, BsGraphUp } from 'react-icons/bs';
 import './Skills.css';
 
 const skillCategories = [
@@ -17,60 +14,35 @@ const skillCategories = [
     skills: [
       { name: 'Python', icon: <SiPython style={{ color: '#3776AB' }} /> },
       { name: 'Java', icon: <FaJava style={{ color: '#007396' }} /> },
-      { name: 'C++', icon: <SiCplusplus style={{ color: '#00599C' }} /> },
+      { name: 'C', icon: <SiC style={{ color: '#A8B9CC' }} /> },
+      { name: 'SQL', icon: <FaDatabase style={{ color: '#4479A1' }} /> },
+      { name: 'HTML', icon: <SiHtml5 style={{ color: '#E34F26' }} /> },
+      { name: 'CSS', icon: <SiCss3 style={{ color: '#1572B6' }} /> },
       { name: 'JavaScript', icon: <SiJavascript style={{ color: '#F7DF1E' }} /> },
-      { name: 'TypeScript', icon: <SiTypescript style={{ color: '#3178C6' }} /> },
-      { name: 'SQL', icon: <SiMysql style={{ color: '#4479A1' }} /> },
     ]
   },
   {
-    title: 'Frontend',
+    title: 'Frameworks & Libraries',
     skills: [
-      { name: 'React', icon: <SiReact style={{ color: '#61DAFB' }} /> },
-      { name: 'HTML5', icon: <SiHtml5 style={{ color: '#E34F26' }} /> },
-      { name: 'CSS3', icon: <SiCss3 style={{ color: '#1572B6' }} /> },
-      { name: 'Bootstrap', icon: <SiBootstrap style={{ color: '#7952B3' }} /> },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss style={{ color: '#06B6D4' }} /> },
-    ]
-  },
-  {
-    title: 'Backend',
-    skills: [
-      { name: 'Node.js', icon: <SiNodedotjs style={{ color: '#339933' }} /> },
-      { name: 'Express.js', icon: <SiExpress style={{ color: '#000000' }} /> },
-      { name: 'Flask', icon: <SiFlask style={{ color: '#000000' }} /> },
-      { name: 'Django', icon: <SiDjango style={{ color: '#092E20' }} /> },
-      { name: 'FastAPI', icon: <SiFastapi style={{ color: '#009688' }} /> },
-    ]
-  },
-  {
-    title: 'AI/ML',
-    skills: [
-      { name: 'TensorFlow', icon: <SiTensorflow style={{ color: '#FF6F00' }} /> },
-      { name: 'PyTorch', icon: <SiPytorch style={{ color: '#EE4C2C' }} /> },
-      { name: 'Scikit-learn', icon: <SiScikitlearn style={{ color: '#F7931E' }} /> },
-      { name: 'OpenCV', icon: <SiOpencv style={{ color: '#5C3EE8' }} /> },
-      { name: 'NLP', icon: <FaRobot style={{ color: '#6C63FF' }} /> },
-    ]
-  },
-  {
-    title: 'Cloud & DevOps',
-    skills: [
-      { name: 'AWS', icon: <SiAmazonwebservices style={{ color: '#232F3E' }} /> },
-      { name: 'Google Cloud', icon: <SiGooglecloud style={{ color: '#4285F4' }} /> },
-      { name: 'Docker', icon: <SiDocker style={{ color: '#2496ED' }} /> },
-      { name: 'Kubernetes', icon: <SiKubernetes style={{ color: '#326CE5' }} /> },
-      { name: 'Git', icon: <SiGit style={{ color: '#F05032' }} /> },
+      { name: 'Flask', icon: <SiFlask style={{ color: '#FFFFFF' }} /> },
+      { name: 'Streamlit', icon: <SiStreamlit style={{ color: '#FF4B4B' }} /> }
     ]
   },
   {
     title: 'Tools',
     skills: [
-      { name: 'VS Code', icon: <SiVisualstudiocode style={{ color: '#007ACC' }} /> },
-      { name: 'Figma', icon: <SiFigma style={{ color: '#F24E1E' }} /> },
-      { name: 'Postman', icon: <SiPostman style={{ color: '#FF6C37' }} /> },
-      { name: 'MongoDB', icon: <SiMongodb style={{ color: '#47A248' }} /> },
-      { name: 'PostgreSQL', icon: <SiPostgresql style={{ color: '#4169E1' }} /> },
+      { name: 'Git', icon: <SiGit style={{ color: '#F05032' }} /> },
+      { name: 'GitHub', icon: <SiGithub style={{ color: '#FFFFFF' }} /> },
+      { name: 'VS Code', icon: <VscVscode style={{ color: '#007ACC' }} /> },
+      { name: 'SQLite', icon: <SiSqlite style={{ color: '#003B57' }} /> }
+    ]
+  },
+  {
+    title: 'Domains',
+    skills: [
+      { name: 'AI', icon: <BsRobot style={{ color: '#6C63FF' }} /> },
+      { name: 'Machine Learning', icon: <BsGraphUp style={{ color: '#00C2FF' }} /> },
+      { name: 'Data Science', icon: <FaDatabase style={{ color: '#47A248' }} /> }
     ]
   }
 ];

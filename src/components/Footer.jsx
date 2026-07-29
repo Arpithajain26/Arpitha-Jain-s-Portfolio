@@ -39,8 +39,9 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Arpitha Jain C B. All rights reserved.</p>
-          <p className="built-with">Built with <FaHeart className="heart-icon" /> and React</p>
+          <p>Designed & Developed by Arpitha Jain C B</p>
+          <p>&copy; 2026 Arpitha Jain. All rights reserved.</p>
+          <p className="built-with">Made with <FaHeart className="heart-icon" /> by Arpitha Jain</p>
         </div>
       </div>
     </footer>

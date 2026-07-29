@@ -5,9 +5,9 @@ import './About.css';
 
 const About = () => {
   const stats = [
-    { id: 1, label: 'Projects', value: '15+' },
+    { id: 1, label: 'CGPA', value: '9.6' },
     { id: 2, label: 'Hackathons', value: '10+' },
-    { id: 3, label: 'Certifications', value: '8+' },
+    { id: 3, label: 'LeetCode Streak', value: '100+' },
     { id: 4, label: 'Tech Stacks', value: '5+' },
   ];
 
@@ -45,13 +45,14 @@ const About = () => {
                   <code>
                     <span className="token key">"name"</span>: <span className="token string">"Arpitha Jain C B"</span>,<br/>
                     <span className="token key">"role"</span>: <span className="token string">"Full-Stack & AI Developer"</span>,<br/>
-                    <span className="token key">"location"</span>: <span className="token string">"Davangere, India"</span>,<br/>
+                    <span className="token key">"location"</span>: <span className="token string">"Ujire, India"</span>,<br/>
                     <span className="token key">"interests"</span>: [<br/>
                     &nbsp;&nbsp;<span className="token string">"Artificial Intelligence"</span>,<br/>
+                    &nbsp;&nbsp;<span className="token string">"Data Science"</span>,<br/>
                     &nbsp;&nbsp;<span className="token string">"Cloud Computing"</span>,<br/>
-                    &nbsp;&nbsp;<span className="token string">"Web Development"</span><br/>
+                    &nbsp;&nbsp;<span className="token string">"Full-Stack Development"</span><br/>
                     ],<br/>
-                    <span className="token key">"coffee_addict"</span>: <span className="token boolean">true</span>
+                    <span className="token key">"goal"</span>: <span className="token string">"Software Engineering Role"</span>
                   </code>
                 </pre>
               </div>
@@ -67,10 +68,10 @@ const About = () => {
           >
             <div className="about-bio">
               <p>
-                Hello! I'm a Final-year Computer Science and Engineering student at Bapuji Institute of Engineering and Technology, Davangere. I am deeply passionate about building AI-powered solutions, architecting full-stack applications, and exploring the expansive world of cloud technologies.
+                Hello! I'm a Final-year Computer Science and Engineering student at SDMIT, Ujire. I am deeply passionate about building AI-powered solutions, exploring Data Science, architecting full-stack applications, and working with cloud technologies.
               </p>
               <p>
-                I thrive in competitive environments and frequently participate in hackathons, which continuously challenge me to learn new technologies and build innovative projects under pressure. My journey involves a continuous pursuit of knowledge across Data Science, Machine Learning, and Web Technologies.
+                I thrive in competitive environments and frequently participate in hackathons, which continuously challenge me to learn new technologies and build practical applications under pressure. My ultimate goal is to secure a good software engineering role where I can contribute to impactful projects.
               </p>
             </div>
 

@@ -6,59 +6,47 @@ import './Achievements.css';
 const achievements = [
   {
     id: 1,
-    icon: <FaTrophy />,
-    title: 'Winner at State Level Hackathon 2025',
-    description: 'Developed an innovative AI solution for agriculture and secured 1st place among 50+ teams.'
+    icon: <FaMedal />,
+    title: '9.6 CGPA in B.E. (CSE)',
+    description: 'Maintained a stellar academic record throughout my engineering degree.'
   },
   {
     id: 2,
-    icon: <FaMedal />,
-    title: 'Top 10 at Smart India Hackathon 2024',
-    description: 'Recognized for creating a robust public service management platform.'
+    icon: <FaStar />,
+    title: '100-day LeetCode Streak',
+    description: 'Consistent problem solver with a strong focus on algorithms and data structures.'
   },
   {
     id: 3,
-    icon: <FaStar />,
-    title: '500+ problems solved on LeetCode',
-    description: 'Consistent problem solver with proficiency in algorithms and data structures.'
+    icon: <FaTrophy />,
+    title: 'AWS Student Builder Group Leader',
+    description: 'Leading the local AWS community, organizing events, and guiding peers in cloud technologies.'
   },
   {
     id: 4,
     icon: <FaCertificate />,
-    title: 'Published research paper on AI in Healthcare',
-    description: 'Co-authored a paper on predictive modeling in early disease detection, published in IEEE.'
+    title: 'Google Cloud Gen AI Academy',
+    description: 'Selected as a participant to explore and build with advanced Generative AI tools.'
+  },
+  {
+    id: 5,
+    icon: <FaAward />,
+    title: 'Gemini Student Ambassador (Applied)',
+    description: 'Applied for the prestigious ambassador program to advocate for Google AI technologies.'
   }
 ];
 
 const certifications = [
   {
     id: 1,
-    title: 'AWS Certified Cloud Practitioner',
+    title: 'AWS Student Builder Group Leader',
     issuer: 'Amazon Web Services',
     icon: <FaCertificate />
   },
   {
     id: 2,
-    title: 'Google Cloud Digital Leader',
+    title: 'Google Cloud Gen AI Academy',
     issuer: 'Google Cloud',
-    icon: <FaCertificate />
-  },
-  {
-    id: 3,
-    title: 'IBM Data Science Professional Certificate',
-    issuer: 'IBM / Coursera',
-    icon: <FaCertificate />
-  },
-  {
-    id: 4,
-    title: 'Meta Front-End Developer Certificate',
-    issuer: 'Meta / Coursera',
-    icon: <FaCertificate />
-  },
-  {
-    id: 5,
-    title: 'Microsoft Azure Fundamentals (AZ-900)',
-    issuer: 'Microsoft',
     icon: <FaCertificate />
   }
 ];

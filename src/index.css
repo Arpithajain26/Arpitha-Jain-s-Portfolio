@@ -1,26 +1,26 @@
 /* ===== CSS Variables & Design Tokens ===== */
 :root {
-  --color-primary: #6C63FF;
-  --color-primary-light: #8B85FF;
-  --color-primary-dark: #5A52E0;
-  --color-secondary: #2D254F;
-  --color-secondary-light: #3D3566;
-  --color-accent: #00C2FF;
-  --color-accent-light: #33D1FF;
-  --color-bg: #F8F9FC;
-  --color-bg-dark: #0F0F1A;
-  --color-bg-card: rgba(255, 255, 255, 0.08);
-  --color-text: #1a1a2e;
-  --color-text-light: #6b7280;
-  --color-text-white: #f0f0f5;
-  --color-border: rgba(108, 99, 255, 0.15);
-  --color-gradient-1: linear-gradient(135deg, #6C63FF 0%, #00C2FF 100%);
-  --color-gradient-2: linear-gradient(135deg, #2D254F 0%, #6C63FF 100%);
-  --color-gradient-3: linear-gradient(135deg, #00C2FF 0%, #6C63FF 50%, #2D254F 100%);
-  --color-glass: rgba(255, 255, 255, 0.06);
-  --color-glass-border: rgba(255, 255, 255, 0.1);
-  --color-glass-light: rgba(255, 255, 255, 0.85);
-  --color-glass-light-border: rgba(108, 99, 255, 0.12);
+  --color-primary: #8B5CF6;
+  --color-primary-light: #A78BFA;
+  --color-primary-dark: #7C3AED;
+  --color-secondary: #1E293B;
+  --color-secondary-light: #334155;
+  --color-accent: #38BDF8;
+  --color-accent-light: #7DD3FC;
+  --color-bg: #0F172A;
+  --color-bg-dark: #020617;
+  --color-bg-card: rgba(30, 41, 59, 0.7);
+  --color-text: #F8FAFC;
+  --color-text-light: #94A3B8;
+  --color-text-white: #FFFFFF;
+  --color-border: rgba(139, 92, 246, 0.2);
+  --color-gradient-1: linear-gradient(135deg, #8B5CF6 0%, #38BDF8 100%);
+  --color-gradient-2: linear-gradient(135deg, #1E293B 0%, #8B5CF6 100%);
+  --color-gradient-3: linear-gradient(135deg, #38BDF8 0%, #8B5CF6 50%, #1E293B 100%);
+  --color-glass: rgba(15, 23, 42, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-glass-light: rgba(30, 41, 59, 0.7);
+  --color-glass-light-border: rgba(255, 255, 255, 0.1);
   
   --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
   
@@ -138,7 +138,7 @@ input, textarea {
 .section-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 700;
-  color: var(--color-secondary);
+  color: var(--color-text-white);
   line-height: 1.2;
 }
 

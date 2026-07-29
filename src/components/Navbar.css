@@ -10,7 +10,7 @@
 
 .navbar--scrolled {
   padding: 12px 0;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--color-glass-light-border);
@@ -29,7 +29,7 @@
 .navbar-logo {
   font-size: 1.6rem;
   font-weight: 800;
-  color: var(--color-secondary);
+  color: var(--color-text-white);
   transition: var(--transition-fast);
 }
 
@@ -108,10 +108,10 @@
     height: 100vh;
     flex-direction: column;
     padding: 80px 30px 30px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.5);
     transition: var(--transition-base);
     gap: 4px;
     align-items: stretch;
@@ -122,7 +122,7 @@
   }
 
   .navbar-link {
-    color: var(--color-text) !important;
+    color: var(--color-text-white) !important;
     padding: 12px 20px;
     font-size: 1rem;
     border-radius: var(--radius-md);

@@ -6,10 +6,10 @@ import './Education.css';
 const educationData = [
   {
     id: 1,
-    degree: "B.E. in Computer Science & Engineering",
-    institution: "Bapuji Institute of Engineering and Technology, Davangere",
-    duration: "2022 - 2026",
-    score: "CGPA: 8.5/10",
+    degree: "B.E. in Computer Science Engineering",
+    institution: "SDMIT, Ujire",
+    duration: "2023 - 2027 (Final Year)",
+    score: "CGPA: 9.6",
     description: "Focused on core CS subjects, AI, full-stack development, and data science. Active participant in coding clubs and multiple hackathons."
   },
   {
