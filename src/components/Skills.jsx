@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  SiPython, SiJavascript, SiHtml5, SiCss3, SiStreamlit, SiFlask, SiGit, SiGithub, SiSqlite, SiC
+  SiPython, SiJavascript, SiHtml5, SiCss, SiStreamlit, SiFlask, SiGit, SiGithub, SiSqlite, SiC
 } from 'react-icons/si';
 import { FaJava, FaDatabase } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
@@ -17,7 +17,7 @@ const skillCategories = [
       { name: 'C', icon: <SiC style={{ color: '#A8B9CC' }} /> },
       { name: 'SQL', icon: <FaDatabase style={{ color: '#4479A1' }} /> },
       { name: 'HTML', icon: <SiHtml5 style={{ color: '#E34F26' }} /> },
-      { name: 'CSS', icon: <SiCss3 style={{ color: '#1572B6' }} /> },
+      { name: 'CSS', icon: <SiCss style={{ color: '#1572B6' }} /> },
       { name: 'JavaScript', icon: <SiJavascript style={{ color: '#F7DF1E' }} /> },
     ]
   },
