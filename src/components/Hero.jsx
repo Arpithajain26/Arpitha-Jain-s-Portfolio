@@ -41,6 +41,11 @@ const Hero = () => {
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const scrollToAbout = () => {
+    const el = document.getElementById('about')
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black text-white" id="hero">
       {/* Background Video */}
@@ -158,12 +163,15 @@ const Hero = () => {
         </div>
       </div>
 
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-500 animate-bounce cursor-pointer z-10"
+      <button
+        type="button"
+        onClick={scrollToAbout}
+        aria-label="Scroll to the About section"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-500 animate-bounce cursor-pointer z-10 hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 rounded-md"
       >
         <HiArrowDown className="text-2xl" />
         <span className="text-xs uppercase tracking-widest mt-1">Scroll</span>
-      </div>
+      </button>
     </section>
   )
 }

@@ -10,7 +10,7 @@ const experiences = [
     period: 'Jun 2026 - Aug 2026',
     description: 'Handled data engineering workflows, data prep pipelines, and built a Fake News Detection Web Application using NLP models to classify and flag misleading articles.',
     projectLink: 'https://github.com/Arpithajain26/fake_news_detection-webapp',
-    image: '/infosys_internship.jpg'
+    image: '/infosys_internship.png'
   }
 ];
 
