@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaExpand, FaTimes } from 'react-icons/fa';
 
 const events = [
   {
@@ -42,6 +43,8 @@ const events = [
 ];
 
 const Gallery = () => {
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -65,11 +68,14 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event, index) => (
-            <div 
+            <button
+              type="button"
               key={event.id}
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
-              className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-purple-400/60 hover:shadow-[0_18px_50px_rgba(168,85,247,0.22)]"
+              data-aos="fade-up"
+              data-aos-delay={index * 130}
+              onClick={() => setSelectedEvent(event)}
+              className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 text-left backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-purple-400/60 hover:shadow-[0_18px_50px_rgba(168,85,247,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
+              aria-label={`View ${event.title}`}
             >
               <div className="h-64 w-full overflow-hidden">
                 <img 
@@ -79,6 +85,9 @@ const Gallery = () => {
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <div className="mb-auto flex items-center gap-2 self-end rounded-full border border-white/25 bg-black/40 px-3 py-1.5 text-xs font-semibold text-white transform -translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <FaExpand /> View Event
+                </div>
                 <h3 className="text-xl font-bold text-white mb-2 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
                   {event.title}
                 </h3>
@@ -86,10 +95,36 @@ const Gallery = () => {
                   {event.description}
                 </p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
+
+      {selectedEvent && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="event-title"
+          onClick={() => setSelectedEvent(null)}
+        >
+          <div className="relative w-full max-w-5xl overflow-hidden rounded-2xl border border-white/15 bg-[#101010] shadow-2xl" onClick={(event) => event.stopPropagation()}>
+            <button
+              type="button"
+              onClick={() => setSelectedEvent(null)}
+              className="absolute right-4 top-4 z-10 rounded-full bg-black/70 p-3 text-white transition-colors hover:bg-purple-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              aria-label="Close event preview"
+            >
+              <FaTimes />
+            </button>
+            <img src={selectedEvent.image} alt={selectedEvent.title} className="max-h-[70vh] w-full object-contain bg-black" />
+            <div className="p-5">
+              <h3 id="event-title" className="text-2xl font-bold text-white">{selectedEvent.title}</h3>
+              <p className="mt-2 leading-relaxed text-gray-300">{selectedEvent.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
