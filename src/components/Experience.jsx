@@ -7,7 +7,7 @@ const experiences = [
     id: 1,
     role: 'Data Engineer Intern',
     company: 'Infosys Springboard',
-    period: 'Jun 2026 - Aug 2026',
+    period: 'Jan - Mar',
     description: 'Handled data engineering workflows, data prep pipelines, and built a Fake News Detection Web Application using NLP models to classify and flag misleading articles.',
     projectLink: 'https://github.com/Arpithajain26/fake_news_detection-webapp',
     image: '/infosys_internship.png'
